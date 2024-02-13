@@ -63,6 +63,14 @@ export function addProject(host: Tree, options: NormalizedSchema) {
         buildTarget: `${options.projectName}:build:production`,
       },
     };
+  } else {
+    // We need to add the serve-static target so that the port can be configured.
+    targets['serve-static'] = {
+      executor: '@nx/web:file-server',
+      options: {
+        port: 3000,
+      },
+    };
   }
 
   const project: ProjectConfiguration = {
