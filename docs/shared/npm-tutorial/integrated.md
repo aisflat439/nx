@@ -19,11 +19,11 @@ The file structure should look like this:
 
 ```treeview
 myorg/
-├── packages/
-├── tools/
-├── nx.json
-├── package.json
 ├── README.md
+├── node_modules
+├── nx.json
+├── package-lock.json
+├── package.json
 └── tsconfig.base.json
 ```
 
